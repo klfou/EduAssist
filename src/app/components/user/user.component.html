@@ -1,0 +1,8 @@
+<div nz-row [nzGutter]="[40,40]">
+  @for (user of users; track user.name; ) {
+    <div nz-col class="user-item" [nzSpan]="2" >
+      <img src="photo/兔耳小符90×90.jpg" alt="">
+      <span>{{user.name}}</span>
+    </div>
+  }
+</div>

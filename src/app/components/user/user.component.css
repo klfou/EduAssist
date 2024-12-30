@@ -1,0 +1,19 @@
+.user-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.user-item > img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.user-item > span {
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+}
