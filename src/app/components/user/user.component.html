@@ -1,8 +1,17 @@
 <div nz-row [nzGutter]="[40,40]">
   @for (user of users; track user.name; let idx = $index) {
-    <div nz-col class="user-item" [nzSpan]="2">
-      <img [src]="'photo/'+photos[idx]" alt="">
+    <div nz-col class="user-item" nzXs="8" nzSm="6" nzMd="6" nzLg="4" nzXl="2">
+      <div class="photo-wrapper">
+        <img [src]="'photo/'+photos[idx]" alt="">
+      </div>
       <span>{{ user.name }}</span>
+
     </div>
   }
+  <div nz-col class="user-item" nzXs="8" nzSm="6" nzMd="6" nzLg="4" nzXl="2">
+    <div class="plus-wrapper">
+      <nz-icon nzType="plus" nzTheme="outline" />
+    </div>
+    <span>添加学生</span>
+  </div>
 </div>

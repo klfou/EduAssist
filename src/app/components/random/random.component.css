@@ -1,0 +1,36 @@
+
+.calc-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.calc-tip {
+  text-align: center;
+  font-size: 16px;
+}
+
+.calc-text {
+  width: 200px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 70px;
+  color: #333;
+}
+
+.calc {
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid #d8d8d8;
+  cursor: pointer;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calc > nz-icon {
+  font-size: 30px;
+  font-weight: 500;
+}

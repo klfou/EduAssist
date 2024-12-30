@@ -3,17 +3,45 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
 }
 
-.user-item > img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-}
+
 
 .user-item > span {
   color: #333;
-  font-size: 16px;
+  margin-top: 2px;
+  font-size: 20px;
   font-weight: 500;
+  cursor: pointer;
+}
+
+.plus-wrapper {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 1px solid #dedede;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plus-wrapper > nz-icon {
+  font-size: 34px;
+}
+
+.photo-wrapper {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 4px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.photo-wrapper > img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
 }

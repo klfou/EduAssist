@@ -1,15 +1,45 @@
 <nz-layout>
-  <nz-header></nz-header>
+  <nz-header>
+    <div class="logo-wrapper">
+      教育助手
+    </div>
+    <div class="btn-wrapper">
+      <ul class="class-list">
+        @for (item of classes; track item) {
+          <li>{{ item }}</li>
+        }
+      </ul>
+      <div class="session">
+        <div>
+          <img class="photo" src="photo/面具90×90.jpg" alt="">
+          <span>在水水水水</span>
+        </div>
+        <a href="">
+          <nz-icon nzType="logout" nzTheme="outline" />
+          注销
+        </a>
+      </div>
+    </div>
+  </nz-header>
   <nz-content>
     <div class="inner-content">
       <app-user></app-user>
     </div>
   </nz-content>
   <nz-footer>
-    <ul nz-menu nzMode="horizontal" class="menu">
-      <li nz-menu-item>nav 1</li>
-      <li nz-menu-item nzSelected>nav 2</li>
-      <li nz-menu-item>nav 3</li>
+    <ul class="menu">
+      <li class="menu-item" (click)="random()">
+        <nz-icon nzType="android" nzTheme="outline"/>
+        <span class="menu-title">随机抽选</span>
+      </li>
+      <li class="menu-item" (click)="time()">
+        <nz-icon nzType="android" nzTheme="outline"/>
+        <span class="menu-title">秒表</span>
+      </li>
+      <li class="menu-item" (click)="time()">
+        <nz-icon nzType="android" nzTheme="outline"/>
+        <span class="menu-title">倒计时</span>
+      </li>
     </ul>
   </nz-footer>
 </nz-layout>

@@ -1,18 +1,97 @@
-nz-header{
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nz-header {
   position: fixed;
   width: 100%;
   background: #fff;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
 }
-nz-content{
+
+nz-content {
   height: 100%;
   padding: 64px 50px 0 50px;
+  background: #fff;
 }
-nz-footer{
+
+nz-footer {
   padding: 0;
   position: fixed;
   width: 100%;
   bottom: 0;
 }
-.menu{
-  text-align: center;
+
+.inner-content {
+  padding: 50px 0;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #ddd;
+}
+
+.menu-item {
+  display: flex;
+  padding: 20px;
+  cursor: pointer;
+  justify-content: center;
+  gap: 6px;
+  align-content: center;
+}
+
+.menu-item:hover {
+  background-color: #dedede;
+}
+
+.menu-title {
+  font-size: 24px;
+  color: #333;
+}
+
+.menu-item > nz-icon {
+  font-size: 30px;
+  color: #333;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.session {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.class-list {
+  margin-right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.class-list > li {
+  padding: 0 40px;
+  cursor: pointer;
+}
+
+.class-list > li:hover{
+  background-color: #dedede;
+}
+
+.photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
 }

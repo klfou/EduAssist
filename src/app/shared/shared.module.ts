@@ -5,6 +5,8 @@ import {NzBreadCrumbModule} from 'ng-zorro-antd/breadcrumb';
 import {NzIconModule} from 'ng-zorro-antd/icon';
 import {NzMenuModule} from 'ng-zorro-antd/menu';
 import {NzGridModule} from 'ng-zorro-antd/grid';
+import {NzModalModule} from 'ng-zorro-antd/modal';
+import {NzAlertModule} from 'ng-zorro-antd/alert';
 
 @NgModule({
   declarations: [],
@@ -16,7 +18,9 @@ import {NzGridModule} from 'ng-zorro-antd/grid';
     NzIconModule,
     NzMenuModule,
     NzLayoutModule,
-    NzGridModule
+    NzGridModule,
+    NzModalModule,
+    NzAlertModule
   ]
 })
 export class SharedModule {

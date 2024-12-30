@@ -7,7 +7,9 @@ export interface User {
 
 @Component({
   selector: 'app-user',
-  imports: [SharedModule],
+  imports: [
+    SharedModule
+  ],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
 })
@@ -41,9 +43,9 @@ export class UserComponent {
   ]
 
   constructor() {
-    for (let i = 0; i < 60; i++) {
+    for (let i = 0; i < 30; i++) {
       this.users.push({
-        name: "感染力",
+        name: "感染力" + i,
       })
     }
   }
