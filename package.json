@@ -8,8 +8,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "electron": "electron .",
-    "package": "electron-packager . --platform=win32 --arch=x32 --out=dist"
+    "electron": "ng build --base-href=./ && electron .",
+    "package": "ng build --base-href=./ && electron-packager . --platform=win32 --arch=ia32 --out=dist"
   },
   "private": true,
   "dependencies": {

@@ -1,17 +1,24 @@
-<div nz-row [nzGutter]="[40,40]">
-  @for (user of users; track user.name; let idx = $index) {
+<div nz-row [nzGutter]="[40,40]" class="user-wrapper">
+  @for (name of users[className()]; track name; let idx = $index) {
     <div nz-col class="user-item" nzXs="8" nzSm="6" nzMd="6" nzLg="4" nzXl="2">
-      <div class="photo-wrapper">
-        <img [src]="'photo/'+photos[idx]" alt="">
+      <div class="photo-wrapper" [ngClass]="selectedIndex()===idx?'selected-photo':''">
+        <img [src]="'photo/'+photos[idx % photos.length]" alt="">
+        <span>{{ name }}</span>
       </div>
-      <span>{{ user.name }}</span>
-
     </div>
   }
-  <div nz-col class="user-item" nzXs="8" nzSm="6" nzMd="6" nzLg="4" nzXl="2">
-    <div class="plus-wrapper">
-      <nz-icon nzType="plus" nzTheme="outline" />
-    </div>
-    <span>添加学生</span>
+  <div class="random-btn">
+    <button nzShape="round" nzSize="large" nz-button nzType="primary" nzDanger (click)="random()" [nzLoading]="isLoading()">
+      {{ isLoading() ? '抽取中...' : '随机抽取' }}
+    </button>
   </div>
 </div>
+
+<nz-modal [(nzVisible)]="isVisible" nzMaskClosable="false" (nzOnCancel)="handleCancel()" [nzFooter]="null">
+  <ng-container *nzModalContent>
+    <div class="hit">
+      <img src="大哭的小乔.gif">
+      <h1>{{ users[className()][selectedIndex()!] }}</h1>
+    </div>
+  </ng-container>
+</nz-modal>

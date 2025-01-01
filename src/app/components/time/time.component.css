@@ -1,0 +1,110 @@
+.time-wrapper{
+ padding-top: 120px;
+}
+.count-down{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+.count-down > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.unit-wrapper {
+  text-align: center;
+  font-weight: normal;
+  font-size: 44px;
+  color: #999;
+  font-family: Montserrat, 'Arial Black', 'Arial-BoldMT', 'Arial Bold', Arial, Helvetica, sans-serif;
+}
+
+.number {
+  font-family: TimeTraveler, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #333;
+  font-size: 340px;
+  line-height: 340px;
+  width: 200px;
+}
+
+.minute, .second {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.divider{
+  height: 120px;
+  width: 2px;
+  background-color: #ddd;
+  margin-bottom: 50px;
+}
+
+.btn-list {
+  display: flex;
+  margin-top: 50px;
+  justify-content: right;
+  gap: 20px;
+  padding-right: 100px;
+}
+
+.btn-list > div {
+  cursor: pointer;
+  border: 1px solid #666;
+  padding: 10px;
+  color: #333;
+  font-size: 18px;
+}
+
+.btn-list > div:hover {
+  border-color: #000;
+  background: #000;
+  color: #fff;
+}
+
+.calc-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.calc-tip {
+  text-align: center;
+  font-size: 16px;
+}
+
+.calc-text {
+  width: 200px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 100px;
+  color: #333;
+  font-family: TimeTraveler, Arial, Helvetica, sans-serif;
+}
+
+.calc {
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid #d8d8d8;
+  cursor: pointer;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calc > nz-icon {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.calc:active {
+  background-color: #dedede;
+}

@@ -7,6 +7,8 @@ import {NzMenuModule} from 'ng-zorro-antd/menu';
 import {NzGridModule} from 'ng-zorro-antd/grid';
 import {NzModalModule} from 'ng-zorro-antd/modal';
 import {NzAlertModule} from 'ng-zorro-antd/alert';
+import {NzDividerModule} from 'ng-zorro-antd/divider';
+import {NzButtonModule} from 'ng-zorro-antd/button';
 
 @NgModule({
   declarations: [],
@@ -20,7 +22,9 @@ import {NzAlertModule} from 'ng-zorro-antd/alert';
     NzLayoutModule,
     NzGridModule,
     NzModalModule,
-    NzAlertModule
+    NzAlertModule,
+    NzDividerModule,
+    NzButtonModule
   ]
 })
 export class SharedModule {
