@@ -1,0 +1,89 @@
+.user-wrapper {
+  padding-top: 25px;
+}
+
+.user-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.plus-wrapper {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 1px solid #dedede;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plus-wrapper > nz-icon {
+  font-size: 34px;
+}
+
+.photo-wrapper {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .2s linear;
+  flex-direction: column;
+  color: #333;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.selected-photo {
+  transform: translate3d(0, -20px, 0) scale(1.4);
+  font-weight: bold;
+  color: #ff7875;
+}
+
+.photo-wrapper > img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.photo-wrapper > span {
+  margin-top: 1px;
+}
+
+.hit {
+  text-align: center;
+}
+
+.hit > h1 {
+  color: #ff7875;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.random-btn {
+  position: absolute;
+  top: 12px;
+  right: 50px;
+}
+
+
+.random-img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .2s linear;
+  padding: 10px;
+}
+
+.random-img-wrapper:hover, .random-img-wrapper-active {
+  transform: translate3d(0, -2px, 0);
+  background: #fff;
+  transform-style: preserve-3d;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.random-img-wrapper:hover > img, .random-img-wrapper-active > img {
+  border-radius: 0;
+}
+

@@ -8,16 +8,15 @@ process.on('uncaughtException', (error) => {
 });
 function createWindow() {
   const win = new BrowserWindow({
-    width: 800,
-    height: 600,
-    frame: false,
+    width: 1000,
+    height: 800,
+    frame: true,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,
       enableRemoteModule: false,
     }
   });
-  win.loadURL('http://localhost:4200');
+  win.loadFile(path.join(__dirname, 'index.html'));
 }
 // App Lifecycle
 app.whenReady().then(createWindow);

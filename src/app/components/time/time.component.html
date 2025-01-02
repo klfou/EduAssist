@@ -1,0 +1,52 @@
+<div class="time-wrapper">
+  <div class="count-down">
+    <div class="minute-wrapper">
+      <div class="minute unselectable">
+        @for (item of minutes()| padNumber; track item; let idx = $index) {
+          @if (idx === 0) {
+            <div class="number tens">{{ item }}</div>
+          } @else {
+            <div class="number ones">{{ item }}</div>
+          }
+        }
+      </div>
+      <div class="unit-wrapper">
+        <span class="unit unselectable">分钟</span>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="second-wrapper">
+      <div class="second unselectable">
+        @for (item of seconds()| padNumber; track item; let idx = $index) {
+          @if (idx === 0) {
+            <div class="number tens">{{ item }}</div>
+          } @else {
+            <div class="number ones">{{ item }}</div>
+          }
+        }
+      </div>
+      <div class="unit-wrapper">
+        <span class="unit unselectable">秒钟</span>
+      </div>
+    </div>
+  </div>
+  <div class="btn-list">
+    <div (click)="countDown()">count down</div>
+    <div>dark mode</div>
+    <div>fullscreen</div>
+  </div>
+</div>
+
+<nz-modal [(nzVisible)]="isVisible" nzTitle="请选择分钟数" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+  <ng-container *nzModalContent>
+    <div class="calc-wrapper">
+      <div class="calc" (click)="onMinus()">
+        <nz-icon nzType="minus" nzTheme="outline"/>
+      </div>
+      <span class="calc-text unselectable">{{ defaultMinutes() }}</span>
+      <div class="calc" (click)="onPlus()">
+        <nz-icon nzType="plus" nzTheme="outline"/>
+      </div>
+    </div>
+  </ng-container>
+</nz-modal>

@@ -1,1 +1,19 @@
-<h1>等等党</h1>
+<nz-layout class="app-layout">
+  <nz-content>
+    <div class="inner-content" [@routeAnimations]="o.isActivated ? o.activatedRoute : undefined">
+      <router-outlet #o="outlet"></router-outlet>
+    </div>
+  </nz-content>
+  <nz-footer>
+    <ul class="menu-wrapper">
+      @for (item of classes; track item) {
+        <li>
+          <a [routerLink]="'user/'+item" [ngClass]="url()==='/user/'+item?'menu-item-active':''">{{ item }}</a>
+        </li>
+      }
+      <li>
+        <a routerLink="time" [ngClass]="url()==='/time'?'menu-item-active':''">倒计时</a>
+      </li>
+    </ul>
+  </nz-footer>
+</nz-layout>
