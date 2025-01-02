@@ -268,10 +268,11 @@ export class UserComponent {
   }
 
   random() {
+    if (this.isLoading()) return
     this.isLoading.set(true);
     const max = this.users[this.className()].length - 1
-    interval(400).pipe(
-      take(15),
+    interval(500).pipe(
+      take(6),
       map(_ => this.randomIndex(max))
     ).subscribe({
       next: value => {

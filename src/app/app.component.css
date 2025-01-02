@@ -13,15 +13,17 @@
 
 nz-content {
   height: 100%;
-  background: #fff;
+  background: #f5f5f5;
 }
 
 nz-footer {
   padding: 0;
+  border-top: 1px solid rgba(0, 0, 0, .05);
+  box-shadow: 0 -10px 24px -2px rgba(0, 0, 0, .05);
 }
 
 .inner-content {
-  height: 100% ;
+  height: 100%;
   overflow-y: auto;
   padding: 20px;
 }
@@ -72,7 +74,7 @@ nz-footer {
   cursor: pointer;
 }
 
-.class-list > div:hover{
+.class-list > div:hover {
   background-color: #dedede;
 }
 
@@ -87,10 +89,29 @@ nz-footer {
   margin-right: 50px;
   float: left;
 }
-.logo > h1{
+
+.logo > h1 {
   color: #fff;
 }
 
-[nz-menu] {
-  line-height: 64px;
+.menu-wrapper {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
+
+.menu-wrapper a {
+  display: block;
+  padding: 20px 30px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #333;
+}
+
+.menu-wrapper a:hover,.menu-item-active {
+  background-color: #dddddd;
+}
+
+

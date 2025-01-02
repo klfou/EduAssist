@@ -46,7 +46,8 @@
   height: 90px;
   border-radius: 50%;
 }
-.photo-wrapper > span{
+
+.photo-wrapper > span {
   margin-top: 1px;
 }
 
@@ -60,8 +61,29 @@
   font-weight: bold;
 }
 
-.random-btn{
+.random-btn {
   position: absolute;
   top: 12px;
   right: 50px;
 }
+
+
+.random-img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .2s linear;
+  padding: 10px;
+}
+
+.random-img-wrapper:hover, .random-img-wrapper-active {
+  transform: translate3d(0, -2px, 0);
+  background: #fff;
+  transform-style: preserve-3d;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.random-img-wrapper:hover > img, .random-img-wrapper-active > img {
+  border-radius: 0;
+}
+

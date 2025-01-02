@@ -1,20 +1,19 @@
 <nz-layout class="app-layout">
-  <nz-header>
-    <div class="logo">
-      <h1>Edu Assist</h1>
-    </div>
-    <ul nz-menu nzTheme="dark" nzMode="horizontal">
-      @for (item of classes; track item) {
-        <li nz-menu-item nzMatchRouter><a [routerLink]="'user/'+item">{{ item }}</a></li>
-      }
-      <li nz-menu-item nzMatchRouter>
-        <a routerLink="time">倒计时</a>
-      </li>
-    </ul>
-  </nz-header>
   <nz-content>
-    <div class="inner-content">
-      <router-outlet></router-outlet>
+    <div class="inner-content" [@routeAnimations]="o.isActivated ? o.activatedRoute : undefined">
+      <router-outlet #o="outlet"></router-outlet>
     </div>
   </nz-content>
+  <nz-footer>
+    <ul class="menu-wrapper">
+      @for (item of classes; track item) {
+        <li>
+          <a [routerLink]="'user/'+item" [ngClass]="url()==='/user/'+item?'menu-item-active':''">{{ item }}</a>
+        </li>
+      }
+      <li>
+        <a routerLink="time" [ngClass]="url()==='/time'?'menu-item-active':''">倒计时</a>
+      </li>
+    </ul>
+  </nz-footer>
 </nz-layout>
